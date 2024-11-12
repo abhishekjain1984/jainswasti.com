@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawings | Swasti Jain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+    <header>
+        <div class="logo">SWASTI JAIN</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="paintings.html">PAINTINGS</a></li>
+                <li><a href="drawings.html" class="active">DRAWINGS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="masonry-grid">
+            <!-- Example artwork items -->
+            <div class="artwork-item" data-full="images/drawing1-full.jpg">
+                <img src="images/drawing1-thumb.jpg" alt="Drawing 1" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Drawing</h3>
+                    <p>Charcoal on Paper</p>
+                    <p>18 x 24 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+            <!-- Add more drawing items following the same structure -->
+        </div>
+
+        <!-- Fullsize Image View -->
+        <div class="fullsize-view">
+            <button class="close-button">×</button>
+            <div class="fullsize-content">
+                <img src="" alt="Full size artwork">
+                <div class="artwork-details">
+                    <h2></h2>
+                    <p class="medium"></p>
+                    <p class="size"></p>
+                    <p class="status"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

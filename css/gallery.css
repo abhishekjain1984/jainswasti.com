@@ -1,0 +1,179 @@
+/* Gallery Page Styles */
+.gallery-page {
+    background: #000;
+    color: #fff;
+}
+
+.gallery-container {
+    padding: 100px 40px 40px;
+    min-height: 100vh;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.artwork-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: #000;
+    width: 100%;
+    overflow: hidden;
+    /* Remove break-inside property as we're no longer using column layout */
+}
+
+.artwork-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    max-height: 600px;
+}
+
+/* Portrait Image Specific */
+.artwork-item.portrait img {
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Hover Information */
+.artwork-info {
+    position: absolute;
+    bottom: -100%;  /* Changed from transform to bottom positioning */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    transition: bottom 0.3s ease;  /* Changed from transform to bottom transition */
+    z-index: 2;
+}
+
+.artwork-item:hover .artwork-info {
+    bottom: 0;  /* Changed from transform */
+}
+
+.artwork-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.artwork-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.status {
+    font-style: italic;
+    color: #4CAF50;
+}
+
+.status.sold {
+    color: #f44336;
+}
+/* For portrait images */
+.artwork-item.portrait {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+.artwork-item.portrait img {
+    height: auto;
+    max-height: 600px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Fullsize View */
+.fullsize-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 40px;
+}
+
+.fullsize-view.active {
+    display: flex;
+}
+
+.fullsize-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+}
+
+.fullsize-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.artwork-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .masonry-grid {
+        columns: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-grid {
+        columns: 1;
+    }
+    
+    .gallery-container {
+        padding: 80px 20px 40px;
+    }
+    
+    .artwork-info {
+        padding: 15px;
+    }
+    
+    .artwork-info h3 {
+        font-size: 16px;
+    }
+    
+    .artwork-info p {
+        font-size: 13px;
+    }
+}

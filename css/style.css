@@ -1,0 +1,226 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+}
+
+/* Background Slider (Homepage) */
+.background-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Content Wrapper (Homepage) */
+.content-wrapper {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+/* Logo */
+.logo {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);  /* Added background */
+    padding: 10px 20px;  /* Added padding */
+    border-radius: 5px;  /* Optional: rounded corners */
+    backdrop-filter: blur(5px);  /* Optional: adds blur effect */
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);  /* Added semi-transparent background */
+    padding: 15px 25px;  /* Added padding */
+    border-radius: 10px;  /* Optional: rounded corners */
+    backdrop-filter: blur(5px);  /* Optional: adds blur effect behind menu */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 5px 0;
+    font-weight: 300;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);  /* Added text shadow for better readability */
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a.active::after {
+    width: 100%;
+}
+
+/* Content Pages (About & Contact) */
+.content-page {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.about-container,
+.contact-container {
+    padding: 120px 40px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content,
+.contact-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.about-content h1,
+.contact-content h1 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.about-text p,
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border-color 0.3s;
+}
+
+.contact-info a:hover {
+    border-color: #fff;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin-right: 20px;
+}
+
+/* Gallery Pages (Paintings & Drawings) */
+.gallery-container {
+    padding: 120px 40px 40px;
+    min-height: 100vh;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo {
+        top: 20px;
+        left: 20px;
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+
+    .main-nav {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: auto;
+        transform: none;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .about-container,
+    .contact-container {
+        padding: 100px 20px 40px;
+    }
+
+    .about-content,
+    .contact-content {
+        padding: 30px 20px;
+    }
+
+    .gallery-container {
+        padding: 100px 20px 40px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

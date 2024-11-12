@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings | Swasti Jain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+    <header>
+        <div class="logo">SWASTI JAIN</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="paintings.html" class="active">PAINTINGS</a></li>
+                <li><a href="drawings.html">DRAWINGS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="masonry-grid">
+            <!-- Painting 1 -->
+            <div class="artwork-item" data-full="images/painting1-full.jpg">
+                <img src="images/painting1-thumb.jpg" alt="Painting 1" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 1</h3>
+                    <p>Oil on Canvas</p>
+                    <p>24 x 36 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 2 -->
+            <div class="artwork-item" data-full="images/painting2-full.jpg">
+                <img src="images/painting2-thumb.jpg" alt="Painting 2" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 2</h3>
+                    <p>Oil on Canvas</p>
+                    <p>30 x 40 inches</p>
+                    <p class="status">Sold</p>
+                </div>
+            </div>
+
+            <!-- Painting 3 -->
+            <div class="artwork-item" data-full="images/painting3-full.jpg">
+                <img src="images/painting3-thumb.jpg" alt="Painting 3" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 3</h3>
+                    <p>Oil on Canvas</p>
+                    <p>18 x 24 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 4 -->
+            <div class="artwork-item" data-full="images/painting4-full.jpg">
+                <img src="images/painting4-thumb.jpg" alt="Painting 4" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 4</h3>
+                    <p>Oil on Canvas</p>
+                    <p>36 x 48 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 5 -->
+            <div class="artwork-item" data-full="images/painting5-full.jpg">
+                <img src="images/painting5-thumb.jpg" alt="Painting 5" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 5</h3>
+                    <p>Oil on Canvas</p>
+                    <p>24 x 30 inches</p>
+                    <p class="status">Sold</p>
+                </div>
+            </div>
+
+            <!-- Painting 6 -->
+            <div class="artwork-item" data-full="images/painting6-full.jpg">
+                <img src="images/painting6-thumb.jpg" alt="Painting 6" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 6</h3>
+                    <p>Oil on Canvas</p>
+                    <p>20 x 24 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 7 -->
+            <div class="artwork-item" data-full="images/painting7-full.jpg">
+                <img src="images/painting7-thumb.jpg" alt="Painting 7" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 7</h3>
+                    <p>Oil on Canvas</p>
+                    <p>40 x 60 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 8 -->
+            <div class="artwork-item" data-full="images/painting8-full.jpg">
+                <img src="images/painting8-thumb.jpg" alt="Painting 8" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 8</h3>
+                    <p>Oil on Canvas</p>
+                    <p>16 x 20 inches</p>
+                    <p class="status">Sold</p>
+                </div>
+            </div>
+
+            <!-- Painting 9 -->
+            <div class="artwork-item" data-full="images/painting9-full.jpg">
+                <img src="images/painting9-thumb.jpg" alt="Painting 9" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 9</h3>
+                    <p>Oil on Canvas</p>
+                    <p>24 x 36 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 10 -->
+            <div class="artwork-item" data-full="images/painting10-full.jpg">
+                <img src="images/painting10-thumb.jpg" alt="Painting 10" loading="lazy">
+                <div class="artwork-info">
+                    <h3>Title of Painting 10</h3>
+                    <p>Oil on Canvas</p>
+                    <p>30 x 40 inches</p>
+                    <p class="status">Available</p>
+                </div>
+            </div>
+
+            <!-- Painting 11-20 -->
+            <!-- Copy and adjust the structure above for paintings 11-20 -->
+            <!-- Just change the numbers in the data-full, src, alt, and title -->
+            <!-- You can also vary the sizes and availability status -->
+
+        </div>
+
+        <!-- Fullsize Image View -->
+        <div class="fullsize-view">
+            <button class="close-button">×</button>
+            <div class="fullsize-content">
+                <img src="" alt="Full size artwork">
+                <div class="artwork-details">
+                    <h2></h2>
+                    <p class="medium"></p>
+                    <p class="size"></p>
+                    <p class="status"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
